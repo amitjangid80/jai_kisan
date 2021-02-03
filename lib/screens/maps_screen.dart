@@ -125,6 +125,9 @@ class _MapsScreenState extends State<MapsScreen> {
 
     if (_isServiceEnabled != null && !_isServiceEnabled) {
       await _location.requestService();
+
+      // calling get current location method
+      _getCurrentLocation();
     }
   }
 
